@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo Starting Gunicorn.
+exec gunicorn gtrdi_site.wsgi:application \
+    --bind 0.0.0.0:8000 \
+    --graceful-timeout=900 \
+    --timeout=900 \
+    --access-logfile - \
+    --error-logfile - \
+    --workers 3

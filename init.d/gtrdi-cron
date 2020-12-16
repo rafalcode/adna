@@ -1,0 +1,1 @@
+0 17 * * * root /app/init.d/gtrdi-cron.sh >> /data/log/gtrdi-cron.log 2>&1
